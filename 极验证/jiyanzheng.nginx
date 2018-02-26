@@ -1,0 +1,11 @@
+server {
+    listen 80;
+
+    location /static {
+        alias /root/极验证/static;
+    }
+
+    location / {
+        proxy_pass http://localhost:2000;
+    }
+}
